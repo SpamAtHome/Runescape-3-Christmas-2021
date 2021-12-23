@@ -57,12 +57,14 @@ def event_presents_total(total_amount, days):
 total_earned = event_presents_total(weekly_presents, days)
 print("Your estimated total amount of presents earned during the event is " + str(total_earned))
 
-
 #rounded total number of presents earned
 rounded_total = round(total_earned)
 print("As you can't obtain a fraction of a present, the final estimated total of presents earned during Runescape 3's 2021 Christmas event is " + str(rounded_total))
 
-#chance to earn green santa hat - will calculate when more data is released
+#chance to earn green santa hat
+def gsh_chance(chance):
+    return total_earned / chance
+print(gsh_chance(2000.0))
 
 #remaining paper at end of event after claiming all present rewards
 leftover_paper = total_estimate % 200
